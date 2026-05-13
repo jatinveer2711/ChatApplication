@@ -24,7 +24,7 @@ export default function Signup() {
 
             setLoading(true)
             setError(false)
-            const res = await axios.post('http://localhost:4000/api/user/signup', formData)
+            const res = await axios.post('https://chatapplication-l7t3.onrender.com/api/user/signup', formData)
             if (res.status === 201) {
                 navigate('/login')
                 alert("User created successfully")

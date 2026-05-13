@@ -16,7 +16,7 @@ export default function Chat() {
       setLoading(true)
       setError("")
       const token = localStorage.getItem("token")
-      const res = await axios.get('http://localhost:4000/api/chat/fetchats', {
+      const res = await axios.get('https://chatapplication-l7t3.onrender.com/api/chat/fetchats', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -46,7 +46,7 @@ export default function Chat() {
         setError("Please login again");
         return;
       }
-      const res = await axios.delete(`http://localhost:4000/api/chat/delete/${chatId}`, {
+      const res = await axios.delete(`https://chatapplication-l7t3.onrender.com/api/chat/delete/${chatId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -78,7 +78,7 @@ export default function Chat() {
       setLoading(true)
       setError("")
       const token = localStorage.getItem("token");
-      const res = await axios.get(`http://localhost:4000/api/chat/search?keyword=${text}`, {
+      const res = await axios.get(`https://chatapplication-l7t3.onrender.com/api/chat/search?keyword=${text}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

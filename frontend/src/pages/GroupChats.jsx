@@ -20,7 +20,7 @@ export default function GroupChats() {
         setLoading(true)
         setError("")
         try {
-            const res = await axios.get(`http://localhost:4000/api/user/search?keyword=${text}`,{
+            const res = await axios.get(`https://chatapplication-l7t3.onrender.com/api/user/search?keyword=${text}`,{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
@@ -55,7 +55,7 @@ export default function GroupChats() {
         setError("")
         const token = localStorage.getItem("token")
         try {
-            const res = await axios.post(`http://localhost:4000/api/chat/creategroupchat`,{
+            const res = await axios.post(`https://chatapplication-l7t3.onrender.com/api/chat/creategroupchat`,{
                 chatName:groupName,
                 users:selected.map((u)=>u._id)
             },{

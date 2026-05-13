@@ -20,7 +20,7 @@ export default function ChatPage() {
         setError("")
         try {
             const token = localStorage.getItem("token")
-            const res = await axios.get(`http://localhost:4000/api/message/getMessages/${id}`, {
+            const res = await axios.get(`https://chatapplication-l7t3.onrender.com/api/message/getMessages/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -40,7 +40,7 @@ export default function ChatPage() {
     const token = localStorage.getItem("token");
 
     const res = await axios.delete(
-      `http://localhost:4000/api/message/delete/${id}`,
+      `https://chatapplication-l7t3.onrender.com/api/message/delete/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -73,7 +73,7 @@ export default function ChatPage() {
     const token = localStorage.getItem("token");
 
     const res = await axios.post(
-      "http://localhost:4000/api/message/sendMessage",
+      "https://chatapplication-l7t3.onrender.com/api/message/sendMessage",
       {
         id: id,
         content: text.trim(),

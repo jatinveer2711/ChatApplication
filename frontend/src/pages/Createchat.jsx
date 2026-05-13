@@ -21,7 +21,7 @@ export default function Createchat() {
         setLoading(true)
         const token = localStorage.getItem("token")
         try {
-            const res = await axios.get(`http://localhost:4000/api/user/search?keyword=${text}`, {
+            const res = await axios.get(`https://chatapplication-l7t3.onrender.com/api/user/search?keyword=${text}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -38,7 +38,7 @@ export default function Createchat() {
         setLoading(true)
         const token = localStorage.getItem("token")
         try {
-            const res = await axios.post('http://localhost:4000/api/chat/accesschat',{userId},{
+            const res = await axios.post('https://chatapplication-l7t3.onrender.com/api/chat/accesschat',{userId},{
                 headers:{
                     Authorization:`Bearer ${token}`
                 }
