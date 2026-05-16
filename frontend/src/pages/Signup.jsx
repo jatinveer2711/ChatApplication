@@ -55,6 +55,7 @@ export default function Signup() {
                 <form onSubmit={handleSubmit} className="space-y-5">
 
                     {/* First Name */}
+                    
                     <input
                         type="text"
                         name="firstName"
@@ -65,6 +66,7 @@ export default function Signup() {
                     />
 
                     {/* Last Name */}
+
                     <input
                         type="text"
                         name="lastName"
@@ -75,6 +77,7 @@ export default function Signup() {
                     />
 
                     {/* Email */}
+
                     <input
                         type="email"
                         name="email"
@@ -85,6 +88,7 @@ export default function Signup() {
                     />
 
                     {/* Password */}
+
                     <input
                         type="password"
                         name="password"
@@ -95,6 +99,7 @@ export default function Signup() {
                     />
 
                     {/* Error Message */}
+
                     {error && (
                         <p className="text-red-500 text-sm text-center">
                             {error}
@@ -102,6 +107,7 @@ export default function Signup() {
                     )}
 
                     {/* Button */}
+
                     <button
                         type="submit"
                         disabled={loading}
@@ -112,6 +118,7 @@ export default function Signup() {
                 </form>
 
                 {/* Footer */}
+
                 <p className="text-center text-gray-500 mt-6 text-sm">
                     Already have an account?{" "}
                     <span className="text-indigo-600 font-semibold cursor-pointer hover:underline" onClick={() => navigate('/login')}>
